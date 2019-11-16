@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import Sidebar from './components/Sidebar'
 import HomeScreen from './screens/HomeScreen'
 import WeatherScreen from './screens/WeatherScreen'
 import 'semantic-ui-css/semantic.min.css'
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
+import { startMqtt } from './mosquitto';
+
 function App() {
+  startMqtt();
   return (
     <Router >
       <div className="App">
